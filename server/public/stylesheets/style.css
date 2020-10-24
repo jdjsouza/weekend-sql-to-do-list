@@ -1,6 +1,7 @@
 html,
 body {
   margin: 0;
+  background-color: skyblue;
 }
 
 .appBar {
@@ -11,27 +12,53 @@ body {
 }
 
 .inputContainer {
-  margin-left: 15px;
-  margin-top: 15px;
+  margin: 15px auto;
+  width: 650px;
 }
 
 input[type='text'] {
+  text-align: center;
   width: 500px;
 }
 
 .outputContainer {
-  margin: 80px auto auto 35px;
+  margin: 80px auto auto auto;
+}
+
+h2 {
+  text-align: center;
 }
 
 ul {
   list-style-type: none;
   margin: auto;
-  width: 80%;
-  height: 150px;
+  width: 90%;
+  height: 500px;
   overflow: hidden;
   overflow-y: scroll;
+  /* height: 50px; */
+}
+
+ul li {
+  height: 1.4em;
 }
 
 li:nth-child(odd) {
-  background-color: wheat;
+  background-color: rgb(78, 169, 192);
+}
+
+.btnList {
+  float: right;
+  margin-left: 5px;
+}
+
+.complete:before {
+  content: '\2713';
+  display: inline-block;
+  color: red;
+  padding: 0 6px 0 0;
+}
+
+.complete {
+  background-color: turquoise !important;
 }

@@ -47,10 +47,11 @@ router.post('/', (req, res) => {
 });
 
 // PUT
-router.put('/tasks/:id', (req, res) => {
+router.put('/update/:id', (req, res) => {
+  console.log('in tasks:id PUT');
   const id = req.params.id;
   const taskStatus = req.body;
-  const queryText = `UPDATE "koala" SET "ready_to_transfer" = $1 WHERE "id" = $2;`;
+  const queryText = `UPDATE "tasks" SET "completed" = $1 WHERE "id" = $2;`;
   pool
     .query(queryText, [taskStatus.completed, id])
     .then((dbResponse) => {
@@ -64,13 +65,14 @@ router.put('/tasks/:id', (req, res) => {
 
 // DELETE
 router.delete('/:id', (req, res) => {
+  console.log('in delete');
   const taskId = req.params.id;
-  const queryText = `DELETE FROM "koala" WHERE id=$1;`;
+  const queryText = `DELETE FROM "tasks" WHERE id=$1;`;
   const queryArrayData = [taskId];
 
   pool
     .query(queryText, queryArrayData)
-    .then((dbResponse) => {
+    .then((response) => {
       res.sendStatus(200);
     })
     .catch((err) => {
