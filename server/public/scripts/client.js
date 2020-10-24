@@ -35,6 +35,7 @@ function updateList() {
     data: { completed: true },
   })
     .then((response) => {
+      // get the updated list from the db
       getToDoList();
     })
     .catch((err) => {
@@ -44,6 +45,7 @@ function updateList() {
 }
 
 function addTask() {
+  // add new task to the db
   const taskToSend = {
     task: $('.js-input-task').val(),
     completed: false,
@@ -56,6 +58,7 @@ function addTask() {
     data: taskToSend,
   })
     .then(function (response) {
+      // get the updated list from the db
       getToDoList();
     })
     .catch((err) => {
@@ -65,14 +68,15 @@ function addTask() {
 }
 
 function deleteTask() {
+  // delete a task from the db
   const id = $(this).data('id');
-
   $.ajax({
     method: 'DELETE',
     url: `/tasks/${id}`,
   })
     .then((response) => {
       console.log('In delete', response);
+      // get the updated list from the db
       getToDoList();
     })
     .catch((err) => {
