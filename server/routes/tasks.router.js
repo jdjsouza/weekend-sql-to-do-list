@@ -3,7 +3,7 @@ const router = express.Router();
 const pg = require('pg');
 
 const pool = new pg.Pool({
-  database: 'todo',
+  database: 'weekend-to-do-app',
   host: 'localhost',
   port: 5432,
   max: 10,

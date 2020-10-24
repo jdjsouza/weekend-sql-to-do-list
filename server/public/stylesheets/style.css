@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   background-color: skyblue;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .appBar {
@@ -13,12 +14,17 @@ body {
 
 .inputContainer {
   margin: 15px auto;
-  width: 650px;
+  width: 80%;
 }
 
 input[type='text'] {
   text-align: center;
-  width: 500px;
+  width: 70%;
+  font-size: 1.25em;
+}
+
+.btnSubmit {
+  font-size: 1.12em;
 }
 
 .outputContainer {
@@ -50,6 +56,8 @@ li:nth-child(odd) {
 .btnList {
   float: right;
   margin-left: 5px;
+  margin-top: 1px;
+  font-size: 0.75em;
 }
 
 .complete:before {
