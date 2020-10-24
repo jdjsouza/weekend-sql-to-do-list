@@ -1,0 +1,37 @@
+html,
+body {
+  margin: 0;
+}
+
+.appBar {
+  padding: 15px 25px;
+  background-color: rgb(24, 170, 238);
+  color: rgb(90, 95, 92);
+  text-align: center;
+}
+
+.inputContainer {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+input[type='text'] {
+  width: 500px;
+}
+
+.outputContainer {
+  margin: 80px auto auto 35px;
+}
+
+ul {
+  list-style-type: none;
+  margin: auto;
+  width: 80%;
+  height: 150px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+li:nth-child(odd) {
+  background-color: wheat;
+}
