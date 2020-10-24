@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
+
+// require router js
 const taskRouter = require('./routes/tasks.router');
 
 // Configure body-parser
