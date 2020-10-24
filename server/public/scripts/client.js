@@ -10,12 +10,14 @@ function onReady() {
 
 function getToDoList() {
   console.log('In getToDoList');
+  // get the list from the server
   $.ajax({
     method: 'GET',
     url: '/tasks',
   })
     .then(function (response) {
       console.log('GET response', response);
+      // display to do list on the page
       renderList(response);
     })
     .catch(function (error) {
@@ -25,6 +27,7 @@ function getToDoList() {
 }
 
 function updateList() {
+  // update the status when marked as completed
   const id = $(this).data('id');
   $.ajax({
     method: 'PUT',

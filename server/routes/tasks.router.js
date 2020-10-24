@@ -10,10 +10,6 @@ const pool = new pg.Pool({
   idleTimeoutMillis: 10000,
 });
 
-// pg
-
-// DB CONNECTION
-
 // GET
 router.get('/', (req, res) => {
   console.log('in /tasks GET');
